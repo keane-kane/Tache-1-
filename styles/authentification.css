@@ -1,0 +1,145 @@
+body{
+    margin:0;
+    position: relative;
+    font-family: 'Franklin Gothic Medium','Arial Narrow', Arial, sans-serif;
+  
+}
+@media screen and (min-width: 768px){}
+
+
+    
+ @media screen and (min-width: 768px)  { }
+
+.plaisir{
+    display: block;
+    background-color: rgb(0, 0,0);
+    height: 4.5em;
+    margin-top:0 ;
+    z-index: 999999;
+   
+}
+.imageH{
+   display: block;
+    background-image: url("../Images/logo-QuizzSA.png");
+    height: 5em;
+    width: 10%;
+    background-repeat: no-repeat;
+    background-size:contain;
+    margin: -4px 0 0px 1em;
+    padding: 0;
+    float: left;
+}
+.jouer{
+    color: #fff;
+    line-height: 70px;
+    margin: 0 0  0px 30%;
+    float: left;
+}
+.background{
+    background-image: url("../Images/img-bg.jpg");
+    height: 36em;
+    background-repeat: no-repeat;
+    background-size:cover ;
+}
+.position{
+    position: relative;
+    margin:auto;
+   width: 35%;
+   top:2em;
+   
+}
+.loginform{
+    display: block;
+    background-color:#80D0DD;
+    height: 4em;
+    line-height: 4em;
+}
+.login{
+    color: #fff;
+    display: inline;
+    margin: 0 0em  0px 1.5em;
+}
+.close{
+    color: #fff;
+    float:right;
+    margin: 0 1.5em  0 0em;
+}
+div.formulaire{
+    background: #f2f2f2;
+     padding: .001em 0px 0px 1em;
+}
+form{
+   
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-bottom-right-radius:5px;
+    border-bottom-left-radius:5px;
+}
+
+    
+.div2{
+    margin: 1.5em 2em 0px 1em;
+    background-color: #ccc;
+}
+.div3{
+    margin: 1.5em 0px 0px 1em;
+    
+}
+.inputF{
+    border:none;
+    height: 50px;
+    width:28em;
+    margin-left: 0px;
+    text-indent: 25px;
+    background-color: #ccc;
+    font-family: 'Franklin Gothic Medium','Arial Narrow', Arial, sans-serif;
+}
+.inputS{
+    border:1px solid #80D0DD!;
+    height: 40px;
+    width:7.5em;
+    margin-left:0;
+    border-radius:5px;
+    background-color:#80D0DD;
+    color:#fff;
+    font-size:14px;
+    float: left;
+    
+    font-family: 'Franklin Gothic Medium','Arial Narrow', Arial, sans-serif;
+}
+.inputF:focus{
+         outline:  none; 
+}
+.div2 img{
+  color: grey;
+}
+.inscrire a{
+    color:grey;
+    text-decoration: none;
+    line-height: 50px;
+    margin-left: 2em;
+}
+.inscrire a:hover{
+    color:rgb(26, 29, 236);
+    text-decoration: underline;
+  
+}
+.erreur{
+    display: inline;
+     position: absolute;
+    text-align: center;
+    margin: 5px 0px 0px 15px;
+    color: red;
+    font-size:12px;
+    background: #fff;
+}
+.erreurg{
+    
+    border: 1 solid black;
+    width: 100%;
+    text-align: center;
+    margin-top:0px;
+    color: red;
+    background: #fff;
+}
