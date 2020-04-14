@@ -1,11 +1,10 @@
-
+﻿
 <?php 
 $errorMessage='';
-// var_dump($_POST);
+
 //verification des champ et sorti des erreurs
     if(isset($_POST['submit']) ) 
     {
-      
       $email=$_POST['email'];
       $mdp=$_POST['login'];
        $result= connexion($email, $mdp);

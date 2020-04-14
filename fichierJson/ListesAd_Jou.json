@@ -1,5 +1,5 @@
 [
-    { "role":"player","nom":"kane","prenom":"Abdou aziz","login":"1234","mail":"player@gamil.com"}, 
-    { "role":"admin","nom":"admin","prenom":"admin","login":"admin","mail":"admin@gmail.com"}
+    { "role":"joueur","nom":"joueur","prenom":"joueur","password":"joueur","login":"joueur@gmail.com"}, 
+    { "role":"admin","nom":"admin","prenom":"admin","password":"admin","login":"admin@gmail.com"}
 ]
       
