@@ -1,203 +1,139 @@
 
- .positionAdmin{
+ .inter-Admin{
     position: relative;
     margin:auto;
-   width: 60%;
-   top:1em;
+    width: 60%;
+    top:.7em;
 }
-.parametre{
+.quizz{
+    background-color: rgb(228, 228, 228);
+    height: auto;
+    width: 100%;
+   
+}
+.param-admin{
     display: block;
-    background-color: rgb(57, 175, 243);
+    background-color: #51bfd0;
     height: 4em;
     line-height: 4em;
+    width: 100%;
 }
 .adminquizz{
     color: #fff;
     display: inline;
     margin: 0 0  0 18em;
 }
-.deconnection{
+.decon-Admin{
     color: #fff;
     float:right;
-    margin: 0 1.5em  0 0em;
+    margin: 0em 1.5em  6em 0em;
+   
 }
-.quizz{
+.decon-Admin a{
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    background-color: #3addd6;
+    height: 30px;
+    margin: 20px 0  0 0;
+    text-indent: 10px;
+    line-height: 30px;
+    width: 100px;
+    font-size: 14px;
+    box-shadow:  0px 0px 5px 0px  #818181 ;
+}
+.content-2{
     background-color: rgb(228, 228, 228);
-    height: 25em;
+    height: auto;
+  
 }
 .partieAdmin{
-    width: 40%;
-    margin-left: 5px;
-    top: 30px;
-   
+    display: flexbox;
+   width: 35%;
+    margin:50px 0 0 5px;
+    background-color:#fff;
+    box-shadow:  0px 0px 5px 0px  #818181 ;
+    border-radius: 5px;
+   float: left;
 }
-.avatar {
-    background-color:  rgb(157, 211, 248);
+.admin-avatar {
+    box-shadow:  0px 0px 5px 0px  #818181 ;
+    background:  linear-gradient(  #f8fdfd,#3addd6) ;
     height: 130px;
-   
+    margin:0px 0  5px 0;
 }
-.avatar img{
-    width:100px;
-    height:100px;
+.admin-avatar img{
+    border: 1px solid #818181 ;
+    width:90px;
+    height:90px;
     border-radius: 100%;
     margin: 1em 0em  0 2em;
     float: left;
+   padding: 5px;
 }
-.nompre{
-    margin: 3em 0em  0 2em;
+.nom-prenom-Admin{
+    margin: 3em 0em  0 1.3em;
     float: left;
+    line-height: 5px;
 }
-.bord{
-  
-   background-color:#fff;
-}
-.liste {
-   
+.liste { 
     height: 35px;
     width: 100%;
     text-indent: 20px;
     
-   
 }
 .liste a {
     text-decoration: none;
-    color: grey;
-    font-size: 14px;
-    line-height: 35px;
+    color: #818181;
+    font-size: 12px;
+    line-height: 36px;
 }
 .liste:hover {
     text-decoration: none;
    border-left:5px solid  rgb(10, 116, 28);
    background-color: rgb(205, 204, 226);
-  width: 98%;
+   width: 98%;
 }
 .liste a img{
     float: right;
-    top:8px;
-    right: 10px;
+    margin: .8em  1em  0 0em;
+    width: 1.5em;
 }
- /*
-.taille{
-    width: 50%;
+.affichage-table{
+display: inline-block;
+    color: #818181;
+    font-weight: lighter;
+    font-family: "Myriad Pro" ;
+    font-size: 14px;
+    line-height: 13px;
+    background-color: #f8fdfd;
+    margin: 1em  0em  .8em 1em;
+    width: 47%;
+    height:29em;
+    box-shadow:  0px 0px 5px 0px  #818181 ;
+    border-radius: 5px;
+}
+.affichage-table h3{
+    margin: 30px 0 10px 0;
+  text-align: center;
+}
+.affichage-table table{
+    width: 80%;
+    border: 1px solid #3addd6;
+    text-align: justify;
+    border-radius: 10px;
     margin: auto;
-    /* background:rgb(242, 242, 242,0.7); 
-    bottom: 20px;  
-    box-shadow: 2px 2px 0px  rgb(242, 242, 242) inset;
+    text-indent: 15px;
 }
-h4{
+.btn-suiv{
     color: #fff;
-    height: 40px;
-   background: #9ACD32;
-   line-height: 40px;
-   text-align: center;
-}
-form{
-    width: 75%;
-    background: rgba(242, 242, 242);
-    left: 5em;
-    height: auto;
-
-}
-.questionnaire span{
-    bottom: 50px;
-    margin: 0px 20px 0 20px;
-}
-.questionnaire textarea{
-    resize: none;
-    top: 15px;
-    background: rgb(242, 242, 242) 
-}
-.score span{
-    margin: 0px 50px 0 20px;
-}
-.score{
-    margin: 1.3em 0 -5px  0;
-}
-
-.score input{
-  height: 2em;
-  width: 26.7em;
-}
-.types span{
-  top:1.5em;
-position: relative;
-margin: 50px 50px 0 20px;
-}
-select{
-  margin-bottom:3px;
-  display: block;
-  left :8em;
-  text-indent: 15px;
-  width:27em;
-  height: 30px;
-}
-.nombre span{
-    width: 6px !important;
-    font-size: 12px;
-    margin: 5px 0px 0 0px;
-    height: 50px;
-    position: absolute !important;
-    left: 20px;
-   
-}
-.nombre input{
-   width:3.5em;
-    height: 27px;
-    left: 8em;
-    margin-bottom:7px;
-    padding: 0px 10px 0 5px;
-}
-.rep{
-   margin: 11px 0px 0 0px;
-}
-.rep span,#textec span{
-    height: 25px;
-    margin-left :20px;
-    padding: 0px 15px 0 0px;
-  
-    }
-.rep input{
-   width:22em;
-    height: 25px;
-    margin-left: 2.5em;
-   
-}
-.checkbox{
-    top:8px;
-   width:2em !important;
-    height: 20px;
-    
-}
-.radio{
-   top:8px;
-   width:2em !important;
-   height: 20px;
-       
-}
-.envoi input{
-   width:15em;
-    height: 50px;
-    left: 1em;
-    color:#fff;
-    background: #9ACD32;
-    border:none;
-    font-size: 30px;
-    top: .5em;
-}
-
-#textec span{
-   width: 6px !important;
-    font-size: 12px;
-    margin: -20px 0px 0 20px;
-   bottom: 20px;
-}
-#textec textarea{
-    resize: none;
-    top: 20px;
-    left:12px;
-    background: rgb(242, 242, 242) 
-}
-#ajouter{
-    display: block;
-    top:-10px;
+    text-decoration: none;
+    background-color: #3addd6;
+    height: 30px;
+    margin: 5px 40px  0px 0px;
+    line-height: 20px;
+    width: 90px;
+    font-size: 14px;
+    box-shadow:  0px 0px 5px 0px  #818181 ;
+    float: right;
 }
