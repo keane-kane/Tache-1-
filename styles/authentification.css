@@ -1,3 +1,5 @@
+@import "interfaceAdmin.css";
+@import "interfaceJoueur.css";
 body{
     margin:0;
     position: relative;
@@ -41,6 +43,7 @@ body{
     background-repeat: no-repeat;
     background-size:cover ;
 }
+
 .position{
     position: relative;
     margin:auto;

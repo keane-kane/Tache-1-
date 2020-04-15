@@ -1,36 +1,4 @@
-*{
-    position:relative !important;
-    margin:0;
-}
-.plaisir{
-    display: block;
-    background-color: rgb(0, 0,0);
-    height: 4.5em;
-    margin-top:0 ;
-}
-.imageH{
-    display: block;
-     background-image: url("../Images/logo-QuizzSA.png");
-     height: 5em;
-     width: 10%;
-     background-repeat: no-repeat;
-     background-size:contain;
-     margin: -4px 0 0px 1em;
-     padding: 0;
-     float: left;
- }
- .jouer{
-     color: #fff;
-     line-height: 70px;
-     margin: 0 0  0px 30%;
-     float: left;
- }
- .background{
-     background-image: url("../Images/img-bg.jpg");
-     height: 36em;
-     background-repeat: no-repeat;
-     background-size:cover ;
- }
+
  .positionAdmin{
     position: relative;
     margin:auto;
