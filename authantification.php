@@ -44,7 +44,7 @@ $errorMessage='';
                     <span class="erreur" id="error-2"></span>
                     <div class="div3">
                         <input  class="inputS" type="submit" class="submit" name="submit" value="Connexion">
-                        <p class="inscrire"><a href="inscri">S'inscrire pour jouer?</a></p>
+                        <p class="inscrire"><a href="Inscription.php">S'inscrire pour jouer?</a></p>
                     </div>
                   </form>
                </div> 

@@ -33,7 +33,7 @@
                         </div>
                         <div class="affichage-table">
                             <h3>LISTE DES JOUEURS PAR SCORE</h3>
-                            <table class="liste-joueur">
+                             <table class="liste-joueur">
                                     <tr><th>Nom</th><th>Prénom</th><th>SCORE</th></tr>
                                     <tr><td>Diatta</td><td>Ibou</td><td>1022 pts</td></tr>
                                     <tr><td>Niang</td><td>Aly</td><td>963 pts</td></tr>

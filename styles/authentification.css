@@ -1,5 +1,6 @@
 @import "interfaceAdmin.css";
-@import "interfaceJoueu1r.css";
+@import "interfaceJoueur.css";
+
 body{
     margin:0;
     position: relative;
