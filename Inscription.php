@@ -1,5 +1,4 @@
 
-<link rel="stylesheet" href="./styles/Inscription.css">
   <div class="contentgeneral">
         <div class="div1">
             <div>
@@ -24,7 +23,7 @@
                 <input class="input1" type="Password" name="Confirmer Password" placeholder="...........">
                 <br>
                   <label class="divavtar">Avatar</label> <input type="file" id="file" title=" ">
-                <input class="input7" type="submit" name="s'incrire" value="Créer compte">
+                 <input class="input7" type="submit" name="incrire" value="Créer compte">
             </form>
         </div>
         <div class="imageavatar">

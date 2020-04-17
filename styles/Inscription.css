@@ -1,110 +1,110 @@
-    *{
-        position: relative;
+        *{
+            position: relative;
+        }
+        .contentgeneral{
+            display: block;
+            position: relative;
+            display: block;
+            width: 40%;
+            margin: auto;
+            height: 33em;
+            top: 2em;
+            border-radius: 50px;
+            background-color: white;
+        }
+        .div1{
+            display: block;
+            width: 50%;
+            height:auto;
+            border-radius: 0px;
+            float: left;
+        }
+        .b ,.formlogin{
+            margin-left: 25px;
+            font-size: 25px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    .niveau{
+        top: -15px;
+        display: inline-block;
+        font-family: Arial, sans-serif;
+        margin: 0px 0 5px 25px;
+        font-size: 13px;
+        color: #ccc;
+        width: 20em;
     }
-   .contentgeneral{
-    display: block;
-    position: relative;
-    display: block;
-    width: 40%;
-    margin: auto;
-    height: 33em;
-    top: 2em;
-    border-radius: 50px;
-    background-color: white;
-   }
-    .div1{
-        display: block;
-        width: 50%;
-        height:auto;
-        border-radius: 0px;
+    hr{
+        width: 20em;
+        height: 3px;
+        border: none;
+        background-color: #ccc;
+        margin: 0 0 0 5px;
+    }
+    .p1{
+        color: gray;
+        font-size: 13px;
+        margin: -20px 0 10px 0px !important ;
+        font-family: Verdana;
+    }
+    .input1{
+        width: 95%;
+        height: 30px;
+        border: 2px solid lightgrey;
+        border-radius: 5px ;
+        font-size: 15px;
+        text-indent: 20px;
+        color:  gray;
+        font-family: sans-serif, Verdana, Geneva, Tahoma;
+        box-shadow: inset 0px 0px 3px 1px  rgb(228, 233, 233) ; 
+    } 
+    .divavtar
+    {
+        font-weight: bold;
+        color:#000;
+        font-size: 15px;
+        margin: 20px 0 8px 0px;
+        font-family: Verdana;
         float: left;
     }
-    .b ,.formlogin{
-        margin-left: 25px;
-        font-size: 25px;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    input[type="file"]  {
+        margin: 20px 0 8px 0px;
+        background: #fff;
+        color: white;
+        border-radius: 5px;
+        font-family: sans-serif, Verdana, Geneva, Tahoma;
+        float: right;
+        width: 10em;
+    } 
+    .input7{
+        border: 1px solid white;
+        padding: 5px;
+        background: rgb(49, 213, 235);
+        color: white;
+        width: 10em;
+        height: 40px;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: bold;
+        font-family: sans-serif, Verdana, Geneva, Tahoma;
+        margin:1em 3em 0 1em;
+        float: right;
     }
-.niveau{
-    top: -15px;
-    display: inline-block;
-	font-family: Arial, sans-serif;
-	margin: 0px 0 5px 25px;
-	font-size: 13px;
-    color: #ccc;
-    width: 20em;
-}
-hr{
-    width: 20em;
-    height: 3px;
-    border: none;
-    background-color: #ccc;
-    margin: 0 0 0 5px;
-}
-.p1{
-	color: gray;
-    font-size: 13px;
-    margin: -20px 0 10px 0px !important ;
-    font-family: Verdana;
-}
-.input1{
-    width: 95%;
-    height: 30px;
-    border: 2px solid lightgrey;
-    border-radius: 5px ;
-    font-size: 15px;
-   text-indent: 20px;
-    color:  gray;
-    font-family: sans-serif, Verdana, Geneva, Tahoma;
-    box-shadow: inset 0px 0px 3px 1px  rgb(228, 233, 233) ; 
-} 
-  .divavtar
-  {
-    font-weight: bold;
-    color:#000;
-    font-size: 15px;
-    margin: 20px 0 8px 0px;
-    font-family: Verdana;
-    float: left;
-  }
-  input[type="file"]  {
-    margin: 20px 0 8px 0px;
-    background: #fff;
-    color: white;
-    border-radius: 5px;
-    font-family: sans-serif, Verdana, Geneva, Tahoma;
-    float: right;
-    width: 10em;
-  } 
-  .input7{
-    border: 1px solid white;
-    padding: 5px;
-   background: rgb(49, 213, 235);
-    color: white;
-    width: 10em;
-    height: 40px;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    font-family: sans-serif, Verdana, Geneva, Tahoma;
-    margin:1em 3em 0 1em;
-    float: right;
-  }
-  .imageavatar{
-    width: 15%; 
-    color: #000;
-    font-family: sans-serif, Verdana, Geneva, Tahoma;
-   float: left;
-   margin: 2em 0 0 5em;
-}
-.imageavatar img{
-    display: block;
-    width: 10em;
-    height: 10em;
-    border-radius: 100%;
-    border: .3em solid  rgb(49, 213, 235);
-}
-.avjoueur{
-    display: inline-block;
-    text-align: center;
-    width: 10em; 
-}
+    .imageavatar{
+        width: 15%; 
+        color: #000;
+        font-family: sans-serif, Verdana, Geneva, Tahoma;
+        float: left;
+        margin: 2em 0 0 5em;
+    }
+    .imageavatar img{
+        display: block;
+        width: 10em;
+        height: 10em;
+        border-radius: 100%;
+        border: .3em solid  rgb(49, 213, 235);
+    }
+    .avjoueur{
+        display: inline-block;
+        text-align: center;
+        width: 10em; 
+    }

@@ -1,5 +1,8 @@
+@import "Inscription.css";
 @import "interfaceAdmin.css";
 @import "interfaceJoueur.css";
+
+
 
 body{
     margin:0;
@@ -117,6 +120,11 @@ form{
 }
 .div2 img{
   color: grey;
+}
+.inscrire {
+    display: inline-block;
+    width: 20em;
+   margin: 0 0 0 10px;
 }
 .inscrire a{
     color:grey;

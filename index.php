@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/authentification.css">
-    
     <title>Authantification Admin</title>
 </head>
 
@@ -33,7 +32,7 @@
         if(isset($_GET['lien']) && $_GET['lien']==="inscri"){
             require_once('Inscription.php');
         }
-        else require_once('authantification.php');
+         else require_once('authantification.php');
     }
      ?>
  </div>
