@@ -16,7 +16,8 @@
                         </span>
                     </div>
                     <div class="content-2">
-                        <div class="partieAdmin">
+                  
+                    <div class="partieAdmin">
                             <div class="admin-avatar">
                                 <img src="Images/img-bg.jpg" alt="">
                                 <div class="nom-prenom-Admin">
