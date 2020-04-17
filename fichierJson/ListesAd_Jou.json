@@ -1,5 +1,2 @@
-[
-    { "role":"joueur","nom":"joueur","prenom":"joueur","password":"joueur","login":"joueur@gmail.com"}, 
-    { "role":"admin","nom":"admin","prenom":"admin","password":"admin","login":"admin@gmail.com"}
-]
-      
+[{"role":"joueur","nom":"joueur","prenom":"joueur","password":"joueur","passconfirm":"joueur","login":"joueur","image":""},
+    {"role":"admin","nom":"admin","prenom":"admin","password":"admin","passconfirm":"admin","login":"admin","image":""}]

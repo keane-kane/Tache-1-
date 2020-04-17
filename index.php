@@ -30,11 +30,11 @@
             deconnexion();
         }
         if(isset($_GET['lien']) && $_GET['lien']==="inscri"){
-            require_once('Inscription.php');
+            require_once('traitement/Inscription.php');
         }
          else require_once('authantification.php');
     }
      ?>
  </div>
   </body>
-</html>
+</html>*

@@ -9,7 +9,6 @@
     background-color: rgb(228, 228, 228);
     height: auto;
     width: 100%;
-   
 }
 .param-admin{
     display: block;
@@ -44,17 +43,18 @@
 }
 .content-2{
     background-color: rgb(228, 228, 228);
-    height: auto;
+    height: 33em;
   
 }
 .partieAdmin{
     display: flexbox;
    width: 35%;
-    margin:50px 0 0 5px;
+    margin:50px 0 0px 5px;
     background-color:#fff;
     box-shadow:  0px 0px 5px 0px  #818181 ;
     border-radius: 5px;
    float: left;
+   padding-bottom: 10px;
 }
 .admin-avatar {
     box-shadow:  0px 0px 5px 0px  #818181 ;
@@ -77,16 +77,15 @@
     line-height: 5px;
 }
 .liste { 
-    height: 35px;
+    height: 50px;
     width: 100%;
     text-indent: 20px;
-    
 }
 .liste a {
     text-decoration: none;
     color: #818181;
-    font-size: 12px;
-    line-height: 36px;
+    font-size: 15px;
+    line-height: 45px;
 }
 .liste:hover {
     text-decoration: none;
@@ -99,6 +98,16 @@
     margin: .8em  1em  0 0em;
     width: 1.5em;
 }
+.affichage{
+    position: relative;
+    display: inline-flex;
+    background-color: rgb(228, 228, 228);
+    top:-6em;
+    margin: 0em  0em  0em 1em;
+    width: 60%;
+    height:auto;
+    border-radius: 5px;
+}
 .affichage-table{
 display: inline-block;
     color: #818181;
@@ -107,9 +116,9 @@ display: inline-block;
     font-size: 14px;
     line-height: 13px;
     background-color: #f8fdfd;
-    margin: 1em  0em  .8em 1em;
-    width: 47%;
-    height:29em;
+    margin: 1em  0em  .8em 0em;
+    width: 90%;
+    height:auto;
     box-shadow:  0px 0px 5px 0px  #818181 ;
     border-radius: 5px;
 }

@@ -11,7 +11,6 @@ $errorMessage='';
 
       // Les identifiants sont transmis ?
        if($result == 'error'){
-         echo $result;
               $errorMessage = "Votre mot de passe ou identifiants est incorrectes  
                               !<br>Si vous êtes nouveau inscrivez-vous <a href=\"#\">Ici</a>";
           }else{
@@ -21,8 +20,6 @@ $errorMessage='';
   
 ?>
 <!-----------------------------------fin code php -------------------->
-     
-       
 
             <div class="position">
             <?php
@@ -33,7 +30,7 @@ $errorMessage='';
                 <div class="formulaire">
                   <form action="" name="admin" method="post" id="connexion-form">
                     <div class="div2">
-                        <input class="inputF" error="error-1" placeholder="Login" type="email"  name="email">
+                        <input class="inputF" error="error-1" placeholder="Login" type="text"  name="email">
                         <img src="Images\Icônes\ic-login.png" alt="">
                     </div>
                     <span class="erreur" id="error-1"></span>

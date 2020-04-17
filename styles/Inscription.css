@@ -5,18 +5,18 @@
             display: block;
             position: relative;
             display: block;
-            width: 40%;
+            width: 31em;
             margin: auto;
-            height: 33em;
-            top: 2em;
-            border-radius: 50px;
+            height: 32em;
+            top: .5em;
+            border-radius: 5px;
             background-color: white;
         }
         .div1{
             display: block;
             width: 50%;
             height:auto;
-            border-radius: 0px;
+            border-radius: 5px;
             float: left;
         }
         .b ,.formlogin{
@@ -34,7 +34,7 @@
         width: 20em;
     }
     hr{
-        width: 20em;
+        width: 18em;
         height: 3px;
         border: none;
         background-color: #ccc;
@@ -48,7 +48,7 @@
     }
     .input1{
         width: 95%;
-        height: 30px;
+        height: 25px;
         border: 2px solid lightgrey;
         border-radius: 5px ;
         font-size: 15px;
@@ -65,9 +65,11 @@
         margin: 20px 0 8px 0px;
         font-family: Verdana;
         float: left;
+        border-radius: 5px;
+     
     }
     input[type="file"]  {
-        margin: 20px 0 8px 0px;
+        margin: 15px 0 8px 0px;
         background: #fff;
         color: white;
         border-radius: 5px;
@@ -86,7 +88,7 @@
         font-size: 16px;
         font-weight: bold;
         font-family: sans-serif, Verdana, Geneva, Tahoma;
-        margin:1em 3em 0 1em;
+        margin:.5em 3em 0 1em;
         float: right;
     }
     .imageavatar{
@@ -94,7 +96,8 @@
         color: #000;
         font-family: sans-serif, Verdana, Geneva, Tahoma;
         float: left;
-        margin: 2em 0 0 5em;
+        margin: 2em 0 0 3em;
+        border-radius: 5px;
     }
     .imageavatar img{
         display: block;
@@ -108,3 +111,21 @@
         text-align: center;
         width: 10em; 
     }
+    .err-span2{
+       position: relative;
+        text-align: center;
+        color: red;
+        float: right;
+        margin: 15px 12px 0 0;
+        font-size:10px;
+        background: #fff;
+    }
+    .err-span2-f{
+        position: relative;
+         text-align: center;
+         color: red;
+         float: right;
+         margin: -5px 12px 0px 0;
+         font-size:10px;
+         background: #fff;
+     }

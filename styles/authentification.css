@@ -43,7 +43,7 @@ body{
 }
 .background{
     background-image: url("../Images/img-bg.jpg");
-    height: 36em;
+    height: 38em;
     background-repeat: no-repeat;
     background-size:cover ;
 }
