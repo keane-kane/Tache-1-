@@ -30,8 +30,10 @@
         if(isset($_GET['status']) && $_GET['status']==="logout"){
             deconnexion();
         }
-    
-     require_once('authantification.php');
+        if(isset($_GET['lien']) && $_GET['lien']==="inscri"){
+            require_once('Inscription.php');
+        }
+        else require_once('authantification.php');
     }
      ?>
  </div>

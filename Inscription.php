@@ -23,7 +23,7 @@
                 <label class="p1 label1">Confirmer Password </label>
                 <input class="input1" type="Password" name="Confirmer Password" placeholder="...........">
                 <br>
-                  <label class="divavtar">Avatar</label> <input type="file" id="file" >
+                  <label class="divavtar">Avatar</label> <input type="file" id="file" title=" ">
                 <input class="input7" type="submit" name="s'incrire" value="Créer compte">
             </form>
         </div>
