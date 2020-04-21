@@ -87,7 +87,7 @@
     font-size: 15px;
     line-height: 45px;
 }
-.liste:hover {
+.liste:hover, .liste:focus{
     text-decoration: none;
    border-left:5px solid  rgb(10, 116, 28);
    background-color: rgb(205, 204, 226);
@@ -101,32 +101,30 @@
 .affichage{
     position: relative;
     display: inline-flex;
-    background-color: rgb(228, 228, 228);
-    top:-6em;
-    margin: 0em  0em  0em 1em;
+    top:-5.5em;
     width: 60%;
-    height:auto;
-    border-radius: 5px;
-}
-.affichage-table{
-display: inline-block;
+    display: inline-block;
     color: #818181;
     font-weight: lighter;
     font-family: "Myriad Pro" ;
     font-size: 14px;
     line-height: 13px;
     background-color: #f8fdfd;
-    margin: 1em  0em  .8em 0em;
-    width: 90%;
+    margin: 0em  0em  .8em 1em;
     height:auto;
+    padding-bottom: 10px;
     box-shadow:  0px 0px 5px 0px  #818181 ;
     border-radius: 5px;
 }
-.affichage-table h3{
+/**---------------------css liste-joueur--------------*/
+.liste-joueur{
+position: relative;
+}
+.liste-joueur h3{
     margin: 30px 0 10px 0;
     text-align: center;
 }
-.affichage-table table{
+.liste-joueur table{
     width: 80%;
     border: 1px solid #3addd6;
     text-align: justify;
@@ -134,15 +132,57 @@ display: inline-block;
     margin: auto;
     text-indent: 15px;
 }
-.btn-suiv{
+
+.btn-suiv,.btn-prec{
     color: #fff;
     text-decoration: none;
-    background-color: #3addd6;
     height: 30px;
-    margin: 5px 40px  0px 0px;
-    line-height: 20px;
+    line-height: 30px;
     width: 90px;
     font-size: 14px;
+    text-align: center;
     box-shadow:  0px 0px 5px 0px  #818181 ;
-    float: right;
 }
+.btn-suiv{
+    background-color: #3addd6;
+   float: right;
+   margin: 5px 50px  0px 0px;
+}
+.btn-prec{
+    background-color: #818181;
+    margin: 5px 0px  0px 50px;
+   float: left;
+}
+/**---------------------css liste-joueur--------------*/
+
+/**---------------------css liste-question--------------*/
+    .les-questions{
+      position: relative;
+    }
+    .les-questions .nb-quest{
+        margin: 15px 0 10px 0;
+        text-align: center;
+       
+    }
+    .liste-questions .nb-quest .nb-q_jeu{
+        display: inline-block;
+    }
+
+    .nb-quest input[type='number']{
+        width: 2.5em !important;    
+    }
+    .nb-quest input[type='submit']{
+        width: 2.5em !important;    
+        font-size: 15px;
+        background: blue;
+    }
+    .les-questions .affichage-qt{
+        width: 90%;
+        border: 1px solid #818181;
+        text-align: justify;
+        border-radius: 10px;
+        margin: auto;
+        text-indent: 15px;
+    }
+    /**---------------------css liste-question--------------*/
+    

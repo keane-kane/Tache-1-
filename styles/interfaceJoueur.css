@@ -139,36 +139,65 @@ font-size: 14px;
 box-shadow:  0px 0px 1px  #818181 ;
 }
 .top-score{
-    display: inline-block;
-    background-color:#fff;
-    font-family: "Sans Cherif" ;
-    box-shadow:  0px 0px 6px 0px  #818181 ;
-    border-radius: 5px;
-    text-indent: 15px;
-    line-height: 25px;
-    font-weight: bold;
-    height: 16em;
-    margin: -20px 15px 0  10px;   
-    text-align: left;    
-    padding-right: 15px;
+   width: 36%;
+   height: 50px;
+   top: -2em;
+    float:left;
+    margin-left: 10px;
 }
-
-.top{
-    box-shadow:  0px 0px 0px 0px  #818181 ;
-    border: none;
-    text-indent: 25px;
+.top-score ul::after{
+    content: "";
+    display :block;
+    clear: both;
+}
+.top-score ul li {
+    float: left;
+    list-style-type: none;
     color:  #818181;
+    font-size: 14px;
+    padding-left: -20px;
 }
-.meilleur{
+.top-score ul li a{
+    display: inline-block;
+    text-decoration: none;  
+    padding: 10px 10px;
+}
+ ul{
+    margin-left: -30px;
+}
+.meilleur_5, .meilleur_1{
+  display: none;
+}
+.top-score li:hover  .meilleur_1,
+.top-score li:hover  .meilleur_5{
+    display: inline-block;
     position: absolute;
-    height: 5em;
-    border: none;
-    font-size: 12px;
-    width: 10em;
+    top: 100%;
+    left :0px;
+    padding:0px ;
+    z-index: 1000;
+}
+.top-score li a:hover{
     background-color: #fff;
-    margin: -10px 0  0  -20px; 
-    color: #3addd6; 
+    color:#818181;
+    box-shadow:  0px 0px 10px 0px  #818181 ;
+    height: 20px;
+    border-radius: 5px;
     padding-top: 10px;
+}
+.meilleur_5{
+    margin: 10px 0 0 0;
+    color: #000;
+    width: 13em;
+    text-indent: 10px;
+    box-shadow:  0px 0px 10px 0px  #818181 ;
+}
+.meilleur_1{
+    margin: 10px 0 0 0;
+    color: #000;
+    width: 13em;
+    text-indent: 10px;
+    box-shadow:  0px 0px 10px 0px  #818181 ;
 }
 .color1{
     border-bottom: 4px solid  #51bfd0 ;

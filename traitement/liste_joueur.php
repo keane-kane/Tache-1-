@@ -1,24 +1,72 @@
-    <div class="affichage-table" id="affichage-table">
+
+<?php 
+    $data = getDatas($file = "liste_jscore");
+    $columns = array_column($data, 'score');
+    array_multisort($columns, SORT_DESC, $data);
+?>
+
+<div class="liste-joueur" id="liste-joueur">
         <h3>LISTE DES JOUEURS PAR SCORE</h3>
-        <table class="liste-joueur">
-                <tr><th>Nom</th><th>Prénom</th><th>SCORE</th></tr>
-                <tr><td>Diatta</td><td>Ibou</td><td>1022 pts</td></tr>
-                <tr><td>Niang</td><td>Aly</td><td>963 pts</td></tr>
-                <tr><td>Mbaye</td><td>Saliou</td><td>877 pts</td></tr>
-                <tr><td>Diouf</td><td>Khady</td><td>875 pts</td></tr>
-                <tr><td>SOW</td><td>MOUSSA</td><td>870 pts</td></tr>
-                <tr><td>MBOUP</td><td>Youssou</td><td>816 pts</td></tr>
-                <tr><td>NIANG</td><td>Djiby</td><td>816 pts</td></tr>
-                <tr><td>DIENG</td><td>Astou</td><td>800 pts</td></tr>
-                <tr><td>SAMB</td><td>Ibrahima</td><td>797 pts</td></tr>
-                <tr><td>GUEYE</td><td>Léna</td><td>763 pts</td></tr>
-                <tr><td>BEYE</td><td>Anminata</td><td>760 pts</td></tr>
-                <tr><td>MANÊ</td><td>Lamine</td><td>759 pts</td></tr>
-                <tr><td>MENDES</td><td>Serges</td><td>730 pts</td></tr>
-                <tr><td>NDECKY</td><td>Estelle</td><td>723 pts</td></tr>
-                <tr><td>DIALLO</td><td>Moustapha</td><td>720 pts</td></tr>
-                <tr><td>NDOUR</td><td>Abba</td><td>716 pts</td></tr>
-                <tr><td>GUEYE</td><td>Léna</td><td>763 pts</td></tr>
+        <table class="affichage-table">
+            <tr><td>Prenom</td><td>nom</td><td>score</td></tr>
+          <?php  
+            $pageCourant ='';
+            $parPage='';
+            if(isset($data))
+            {
+                $total=sizeof($data);
+                $parPage= 15;
+                $start= 0;
+                $total_page= ceil($total/$parPage); 
+                if(isset($_GET['listej'])){ // Si la variable $_GET['page'] existe...
+                    $pageCourant=intval($_GET['listej']);    
+
+                    if($pageCourant>$total_page){ // Si la valeur de $pageCourant (le numéro de la page) est plus grande que $total_page...
+                        $pageCourant=$total_page;
+                    }
+                }else{ // Sinon
+                    $pageCourant=1; // La page actuelle est la n°1    
+                } 
+
+                $start= (($pageCourant-1)*$parPage);
+               // echo $start;
+                //affichage de la liste des joueur
+              
+                   //echo $data[1]['prenom'];
+                    for ($i=$start; $i <$start+$parPage-1 ; $i++) {
+                      echo "<tr>";
+                        for($j = $i ; $j<=$i ; $j++){
+                            if(isset($data[$j])){
+                                echo '<td>'.$data[$j]['prenom'].'</td>';
+                                echo '<td>'.$data[$j]['nom'].'</td>';
+                                echo '<td>'.$data[$j]['score'].'</td>';
+                            }
+                         }
+                      echo "</tr>"; 
+                   }
+        ?>
         </table>
-        <button class="btn-suiv">Suivant</button>
-    </div>
+      <?php
+//pagination
+      echo "<div class=\"btn-suiv-prec-j\">";
+        if($pageCourant>1){
+            $precedent=$pageCourant-1;
+            echo'<a class="btn-prec btn-prec-j" href="index.php?page=admin&listej='.$precedent.'">precedent</a>';    
+                }  
+        if($pageCourant<$total_page){
+            $suivant= $pageCourant+1;
+             echo'<a class="btn-suiv btn-suiv-j" href="index.php?page=admin&listej='.$suivant.'">suivant</a>';   
+                }else   
+             echo'<a class="btn-suiv btn-suiv-j" href="#" >suivant</a>';
+
+    echo "</div>";
+    }
+    ?>
+
+</div>
+
+        <!-- <div class="btn-suiv-prec-j">
+            <button class="btn-prec btn-prec-j" >Précédent</button>
+            <button class="btn-suiv btn-suiv-j">Suivant</button>
+        </div> -->
+   

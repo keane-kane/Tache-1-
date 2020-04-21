@@ -40,15 +40,51 @@
                       </div>
                    </div>
                    <div class="top-score">
-                   <table class="liste-joueur">
-                        <tr><th class="top">Top scores</th><th class="meilleur">Mon meilleur score</th></tr>
-                        <tr><td>Ibou DIATTA</td><td class="color1">1022 pts</td></tr>
-                        <tr><td>Aly NIANG</td><td class="color2">963 pts</td></tr>
-                        <tr><td>Saliou MBAYE</td><td class="color3">877 pts</td></tr>
-                        <tr><td>Khady DIOUF</td><td class="color4">875 pts</td></tr>
-                        <tr><td>Moussa SOW</td><td class="color5">870 pts</td></tr>
-                   </table>
+                        <ul >
+                           <li><a href="">Top scores</a>
+                               <div class="meilleur_5">
+                                   <table class="liste-joueur">
+                                        <tr><td>Ibou DIATTA</td><td class="color1">1022 pts</td></tr>
+                                        <tr><td>Aly NIANG</td><td class="color2">963 pts</td></tr>
+                                        <tr><td>Saliou MBAYE</td><td class="color3">877 pts</td></tr>
+                                        <tr><td>Khady DIOUF</td><td class="color4">875 pts</td></tr>
+                                        <tr><td>Moussa SOW</td><td class="color5">870 pts</td></tr>
+                                    </table>
+                               </div>
+                            </li>
+                            <li><a href=""> Mon meilleur score</a>
+                                <div class="meilleur_1">     
+                                    <table class="liste-joueur">
+                                        <tr><td>Ibou DIATTA</td><td class="color1">1022 pts</td></tr>
+                                        <tr><td>Aly NIANG</td><td class="color2">963 pts</td></tr>
+                                        <tr><td>Saliou MBAYE</td><td class="color3">877 pts</td></tr>
+                                        <tr><td>Khady DIOUF</td><td class="color4">875 pts</td></tr>
+                                        <tr><td>Moussa SOW</td><td class="color5">870 pts</td></tr>
+                                    </table>
+                                </div>
+                            </li>
+                       </ul>
                    </div>
+
+                      
+
+                         <!-- <div class="_5_meilleur"> 
+                            <p class="top"><a href="">Top scores</a></p>
+                            <table class="liste-joueur">
+                                <tr><td>Ibou DIATTA</td><td class="color1">1022 pts</td></tr>
+                                <tr><td>Aly NIANG</td><td class="color2">963 pts</td></tr>
+                                <tr><td>Saliou MBAYE</td><td class="color3">877 pts</td></tr>
+                                <tr><td>Khady DIOUF</td><td class="color4">875 pts</td></tr>
+                                <tr><td>Moussa SOW</td><td class="color5">870 pts</td></tr>
+                           </table>
+                        </div>  
+                        <div class="mon_score">
+                            <p class="meilleur">Mon meilleur score</p>
+                        </div> -->
+                  
                </div>
             </div>
      
+<script>
+    
+</script>
