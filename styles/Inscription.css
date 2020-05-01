@@ -11,6 +11,7 @@
             top: .5em;
             border-radius: 5px;
             background-color: white;
+            line-height: 13px;
         }
         .div1{
             display: block;

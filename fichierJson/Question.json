@@ -1,0 +1,5 @@
+[{"question":"hhhhikh","nbPoint":"55","choix":"choix_multis","reponse":["con","concon","3cons"],
+    "correcte":[0,"on_1",null]},{"question":"c'est quoi la follie","nbPoint":"15","choix":"choix_multis",
+        "reponse":["con","fou","dingue"],"correcte":[0,"on_1","on_2"]},
+        {"question":"c'est quoi la follie2","nbPoint":"89","choix":"choix_simple",
+            "reponse":["gtt","nul","on est","dingg"],"correcte":[0,"on_1",0,0]}]

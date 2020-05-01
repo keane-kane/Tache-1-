@@ -17,9 +17,9 @@ $results="";
 $imageFileType="";
 $pattern_nom_prenom = "/^([a-zA-ZÀ-ÿ]+([- ']?[a-zA-ZÀ-ÿ]+)*){3,30}$/";
 $patern_mail= " /^.+@.+\.[a-zA-Z]{2,}$/ ";
-
+//var_dump($_POST);
     if(isset($_POST['inscrire'] )){
-      
+      // echo "col1";
         $nom =$_POST['nom'];
         $prenom=$_POST['prenom'];
         $login=$_POST['login'];
@@ -29,8 +29,7 @@ $patern_mail= " /^.+@.+\.[a-zA-Z]{2,}$/ ";
         //teste et validite de la saisie
          if(!preg_match($pattern_nom_prenom, test_input($nom))&& isset($nom)){
              $erreur['nom']= "le nom est incorrect";
-
-         }else $erreur['nom']= "";
+         }
          if(!preg_match($pattern_nom_prenom, test_input($prenom)) && isset($prenom)){
             $erreur['prenom']= "le prenom est incorrect";
         }
@@ -46,20 +45,19 @@ $patern_mail= " /^.+@.+\.[a-zA-Z]{2,}$/ ";
         if($mdp !== $mdp_confirm){
             $erreur['mdp_con']= "les mot de passe est different";
         }
-        //$resule = Teste_Image();
-
-       //teste de limage 
-       
+        
            if(isset($_FILES['imgAvatar']) && empty($_FILES['imgAvatar']['error'])){
-            
+               
                $target_file = basename($_FILES['imgAvatar']['name']);
+               echo $target_file;
                $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+               echo $imageFileType;
                //si fichier n'est pas une image
                $check = @getimagesize($_FILES["imgAvatar"]["tmp_name"]);
                //la taille de l'image
                $taille = filesize($_FILES["imgAvatar"]["tmp_name"]);
-   
-                   if($taille > 10000){
+               echo $taille;
+                   if($taille > 100000){
                        $erreurs= "le fichier est trop lourd";
                        $charger = 0;
                    }elseif(!empty($imageFileType) && $imageFileType != "jpg" && $imageFileType != "png"){
@@ -73,35 +71,39 @@ $patern_mail= " /^.+@.+\.[a-zA-Z]{2,}$/ ";
                        $erreurs= "le fichier doit etre une image";
                        $charger =0;
                    }
+                   echo  $charger;
+                   echo $erreurs;
+                   var_dump($erreur);
                if($charger == 1 && empty($erreurs) && empty($erreur)){ 
-                
-                //teste si un admin ou joueur
-                if(strpos($_SERVER['QUERY_STRING'], "admin") !== false){
-                     $role = "admin";
-                } elseif(strpos($_SERVER['QUERY_STRING'], "inscri") !== false){
-                    $role = "joueur";}
+                   echo  $charger;
+                    //teste si un admin ou joueur
+                    
+                    if(strpos($_SERVER['QUERY_STRING'], "admin") !== false){
+                        $role = "admin";
+                    } elseif(strpos($_SERVER['QUERY_STRING'], "inscri") !== false){
+                        $role = "joueur";
+                    }
 
-                 if(move_uploaded_file($_FILES["imgAvatar"]["tmp_name"],$stock_img.$target_file)){
-                     $file = $stock_img.$target_file; 
-                     //le role  du user est definit par defaut a "joueur"
-                     //un admin peux le definir a "admin" sil doit creer son homologue
-                     $results = Inscrire($nom, $prenom, $login,$mdp, $mdp_confirm,$file,$role);
-                     $result= connexion($login, $mdp);
-                     if($result == 'error'){
-                        $errorMessage = "Votre mot de passe ou identifiants est incorrectes  
-                                      !<br>Si vous êtes nouveau inscrivez-vous <a href=\"#\">Ici</a>";
-                     }else{
-                        header("location: index.php?page=".$result);
-                      }     
-                  }
-                  }else $erreurs= "Erreur de telechargement";
-              }
-           }
+                    if(move_uploaded_file($_FILES["imgAvatar"]["tmp_name"],$stock_img.$target_file)){
+                        $file = $stock_img.$target_file; 
+                        
+                        $results = Inscrire($nom, $prenom, $login,$mdp, $mdp_confirm,$file,$role);
+                        
+                        $result= connexion($login, $mdp);
+                        if($result == 'error'){
+                            $errorMessage ='';
+                        }else{
+                            header("location: index.php?page=".$result);
+                        }     
+                    }else $erreurs= "Erreur de telechargement";
+                }
+            }
+        }
  
  //  var_dump($users= getDatas());
  //var_dump($erreur);
  if(!empty($results))
- echo '<script>alert("$results")</script>';
+    echo '<script>alert("$results")</script>';
 ?>
              
   <div class="contentgeneral adapter">

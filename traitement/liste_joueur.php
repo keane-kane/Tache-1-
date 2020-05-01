@@ -1,9 +1,4 @@
 
-<?php 
-    $data = getDatas($file = "liste_jscore");
-    $columns = array_column($data, 'score');
-    array_multisort($columns, SORT_DESC, $data);
-?>
 
 <div class="liste-joueur" id="liste-joueur">
         <h3>LISTE DES JOUEURS PAR SCORE</h3>
@@ -64,9 +59,3 @@
     ?>
 
 </div>
-
-        <!-- <div class="btn-suiv-prec-j">
-            <button class="btn-prec btn-prec-j" >Précédent</button>
-            <button class="btn-suiv btn-suiv-j">Suivant</button>
-        </div> -->
-   

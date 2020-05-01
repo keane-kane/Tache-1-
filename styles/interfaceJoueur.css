@@ -176,6 +176,7 @@ box-shadow:  0px 0px 1px  #818181 ;
     left :0px;
     padding:0px ;
     z-index: 1000;
+    word-spacing: 5px;
 }
 .top-score li a:hover{
     background-color: #fff;
@@ -188,14 +189,14 @@ box-shadow:  0px 0px 1px  #818181 ;
 .meilleur_5{
     margin: 10px 0 0 0;
     color: #000;
-    width: 13em;
+    width: 11em;
     text-indent: 10px;
     box-shadow:  0px 0px 10px 0px  #818181 ;
 }
 .meilleur_1{
     margin: 10px 0 0 0;
     color: #000;
-    width: 13em;
+    width: 11em;
     text-indent: 10px;
     box-shadow:  0px 0px 10px 0px  #818181 ;
 }

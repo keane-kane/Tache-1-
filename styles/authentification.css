@@ -8,7 +8,6 @@ body{
     margin:0;
     position: relative;
     font-family: 'Franklin Gothic Medium','Arial Narrow', Arial, sans-serif;
-  
 }
 @media screen and (min-width: 768px){}
 
@@ -22,7 +21,6 @@ body{
     height: 4.5em;
     margin-top:0 ;
     z-index: 999999;
-   
 }
 .imageH{
    display: block;
@@ -76,15 +74,11 @@ div.formulaire{
      padding: .001em 0px 0px 1em;
 }
 form{
-   
     position: relative;
     width: 100%;
     height: auto;
-    border-bottom-right-radius:5px;
-    border-bottom-left-radius:5px;
+   
 }
-
-    
 .div2{
     margin: 1.5em 2em 0px 1em;
     background-color: #ccc;
@@ -96,7 +90,7 @@ form{
 .inputF{
     border:none;
     height: 50px;
-    width:28em;
+    width:25em;
     margin-left: 0px;
     text-indent: 25px;
     background-color: #ccc;
@@ -112,30 +106,29 @@ form{
     color:#fff;
     font-size:14px;
     float: left;
-    
     font-family: 'Franklin Gothic Medium','Arial Narrow', Arial, sans-serif;
 }
 .inputF:focus{
          outline:  none; 
 }
 .div2 img{
+    display: inline-block;
   color: grey;
 }
 .inscrire {
     display: inline-block;
-    width: 20em;
+    width: 15em;
    margin: 0 0 0 10px;
 }
 .inscrire a{
     color:grey;
     text-decoration: none;
     line-height: 50px;
-    margin-left: 2em;
+    margin-left: 3em;
 }
 .inscrire a:hover{
     color:rgb(26, 29, 236);
     text-decoration: underline;
-  
 }
 .erreur{
     display: inline;
@@ -147,7 +140,6 @@ form{
     background: #fff;
 }
 .erreurg{
-    
     border: 1 solid black;
     width: 100%;
     text-align: center;

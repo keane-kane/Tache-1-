@@ -1,16 +1,19 @@
 <?php
   is_connect();
+  $quest = getDatas($file = "Question");
+//   shuffle($quest);
   $nom = $_SESSION['user']['nom'];
   $prenom = $_SESSION['user']['prenom'];
- 
+  $login = $_SESSION['user']['login'];
+  $avatar  = $_SESSION['user']['image'];
+//   var_dump($quest);
 ?>
-   
             <div class="position-user">
                 <div class="param-user">
                     <div class="avatar-user">
-                        <img src="Images/img-bg.jpg" alt="">
+                        <img src="<?= !empty($avatar) ? $avatar:"Images/img-bg.jpg"?>" alt="">
                         <div class="nom-prenom-user">
-                            <p class="prenom-user"><?= $prenom; ?></p>
+                            <p class="prenom-user"><?= $nom; ?></p>
                             <p class="nom-user"> </p>
                         </div>
                     </div>
@@ -24,67 +27,99 @@
                </div>
                <div class="content">
                    <div class="content-quest">
-                      <div class="_question">
-                          <h3>Questions 1/5</h3>
-                          <p>Les langages Web</p>
-                      </div>  
-                      <p class="nbre-points">3pts</p>
-                      <div class="_reponses">
-                          <div class="input-quest"><input type="checkbox" name="" id=""><span>HTML</span></div>
-                          <div class="input-quest"><input type="checkbox" name="" id=""><span>R</span></div>
-                          <div class="input-quest"><input type="checkbox" name="" id=""><span>JAVA</span></div>
-                      </div>
-                      <div class="content-btn">
-                          <button id="precedent" type="submit">Précédent</button>
-                          <button id="suivant" type="submit">Suivant</button>
-                      </div>
-                   </div>
-                   <div class="top-score">
-                        <ul >
+                       <?php
+                       $i= 0 ;
+                       $lq = 0;
+                         if(isset($quest)){
+                            $parPage= 5;
+                            $start= 0;
+                          //  $total_page= ceil($total/$parPage); 
+                            if(isset($_POST['game'])){ // Si la variable $_GET['page'] existe...
+                              //echo $_GET['game'];
+                             echo $_POST['lq'];
+                              echo 'ok';
+                                //  $pageCourant=intval($_GET['listequ']);   
+            
+                            //     if($pageCourant>$total_page){ // Si la valeur de $pageCourant (le numéro de la page) est plus grande que $total_page...
+                            //         $pageCourant=$total_page;
+                            //     }
+                            // }else{ // Sinon
+                            //     $pageCourant=1; // La page actuelle est la n°1    
+                            } 
+            
+                            //$start= (($pageCourant-1)*$parPage);
+                       ?>
+                            <div class="_question">
+                                <h3>Questions <?= $lq+1 ?>/5</h3>
+                                <p><?= $quest[$i]['question'] ?></p>
+                            </div>  
+                            <p class="nbre-points"><?= $quest[$i]['nbPoint'] ?>pts</p>
+                            <div class="_reponses">
+                                <?php if($quest[$i]['choix'] == 'choix_multis'){ ?>
+                                <div class="input-quest"><input type="checkbox" name="" id=""><span>HTML</span></div>
+                                <div class="input-quest"><input type="checkbox" name="" id=""><span>R</span></div>
+                                <div class="input-quest"><input type="checkbox" name="" id=""><span>JAVA</span></div>
+                            
+                                <?php  }elseif($quest[$i]['choix'] == 'choix_simple'){?>
+                                <?php  }elseif($quest[$i]['choix'] == 'choix_text'){ echo 'ok texte';}?>
+                            </div>
+                        <?php } ?>
+                        <div class="content-btn">
+                        <?php
+                    //pagination
+                        $total_page= $pageCourant=0;
+                            if($pageCourant>1){
+                                $precedent=$pageCourant-1;
+                                echo'<a class="btn-prec btn-prec-j" href="?page=joueur&game=lq">precedent</a>';  
+                                  
+                                    }  
+                            if($pageCourant<=$total_page){
+                                $suivant= $pageCourant;
+                           //  echo'<a class="btn-suiv btn-suiv-j" href="?page=joueur&game=lq">suivant</a>';  
+                              echo "<input type=submit name=game value='suivant'>"; 
+                                echo "<input type=hidden name=lq value='$suivant'>"; 
+                                    }else  
+                                echo'<a class="btn-suiv btn-suiv-j" href="" >Terminer</a>';
+                        ?> 
+                      </div> 
+                    </div>
+                    <div class="top-score">
+                        <ul>
                            <li><a href="">Top scores</a>
                                <div class="meilleur_5">
                                    <table class="liste-joueur">
-                                        <tr><td>Ibou DIATTA</td><td class="color1">1022 pts</td></tr>
-                                        <tr><td>Aly NIANG</td><td class="color2">963 pts</td></tr>
-                                        <tr><td>Saliou MBAYE</td><td class="color3">877 pts</td></tr>
-                                        <tr><td>Khady DIOUF</td><td class="color4">875 pts</td></tr>
-                                        <tr><td>Moussa SOW</td><td class="color5">870 pts</td></tr>
+                                      <?php 
+                                         $i = 1;
+                                         while($i<= 5){
+                                            echo   "<tr><td>".$data[$i]['nom'] ,"  ",$data[$i]['prenom'].
+                                                   "</td><td class=color".$i.">".$data[$i]['score']."</td></tr>";
+                                            $i++;
+                                         }
+                                      ?>
                                     </table>
                                </div>
                             </li>
                             <li><a href=""> Mon meilleur score</a>
                                 <div class="meilleur_1">     
                                     <table class="liste-joueur">
-                                        <tr><td>Ibou DIATTA</td><td class="color1">1022 pts</td></tr>
-                                        <tr><td>Aly NIANG</td><td class="color2">963 pts</td></tr>
-                                        <tr><td>Saliou MBAYE</td><td class="color3">877 pts</td></tr>
-                                        <tr><td>Khady DIOUF</td><td class="color4">875 pts</td></tr>
-                                        <tr><td>Moussa SOW</td><td class="color5">870 pts</td></tr>
+                                     <?= $data[$i]['nom']==$nom 
+                                       ?  "<tr><td>".$data[$i]['nom']." ".$data[$i]['prenom'].
+                                       "</td><td class=color".$i.">".$data[$i]['score']."</td></tr>" :"pas de score dispo";
+                                     ?>
                                     </table>
                                 </div>
                             </li>
                        </ul>
-                   </div>
-
-                      
-
-                         <!-- <div class="_5_meilleur"> 
-                            <p class="top"><a href="">Top scores</a></p>
-                            <table class="liste-joueur">
-                                <tr><td>Ibou DIATTA</td><td class="color1">1022 pts</td></tr>
-                                <tr><td>Aly NIANG</td><td class="color2">963 pts</td></tr>
-                                <tr><td>Saliou MBAYE</td><td class="color3">877 pts</td></tr>
-                                <tr><td>Khady DIOUF</td><td class="color4">875 pts</td></tr>
-                                <tr><td>Moussa SOW</td><td class="color5">870 pts</td></tr>
-                           </table>
-                        </div>  
-                        <div class="mon_score">
-                            <p class="meilleur">Mon meilleur score</p>
-                        </div> -->
-                  
+                    </div>
                </div>
             </div>
      
 <script>
-    
+   
+        document.querySelector('.btn-suv').addEventListener('click',function(e){
+           alert('ok clic')
+        })
+        document.querySelector('.btn-prec').addEventListener('click',function(e){
+            alert('ok3')
+    })
 </script>
