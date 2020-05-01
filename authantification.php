@@ -17,7 +17,6 @@ $errorMessage='';
              header("location: index.php?page=".$result);
           }     
     }
-  
 ?>
 <!-----------------------------------fin code php -------------------->
 
@@ -76,6 +75,4 @@ $errorMessage='';
                 return 0;
               }
      })
-
 </script> 
-
