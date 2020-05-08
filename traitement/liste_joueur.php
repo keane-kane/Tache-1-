@@ -1,5 +1,3 @@
-
-
 <div class="liste-joueur" id="liste-joueur">
         <h3>LISTE DES JOUEURS PAR SCORE</h3>
         <table class="affichage-table">
@@ -7,6 +5,9 @@
           <?php  
             $pageCourant ='';
             $parPage='';
+            $data = getDatas($file = "liste_jscore");
+            $columns = array_column($data, 'score');
+            array_multisort($columns, SORT_DESC, $data);
             if(isset($data))
             {
                 $total=sizeof($data);

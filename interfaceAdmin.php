@@ -29,6 +29,7 @@
                                 <div class="liste creerAdmin"><a href="index.php?page=admin&menu=creeradmin">Créer Admin<img src="Images\Icônes\ic-ajout.png"/></a></div>
                                 <div class="liste joueurs" ><a href="index.php?page=admin&menu=listejoueur">Listes joueurs<img src="Images\Icônes\ic-liste.png"/></a></div>
                                 <div class="liste creerquestions"><a href="index.php?page=admin&menu=creerquestion">Créer Questions <img src="Images\Icônes\ic-ajout.png"/></a></div>
+                                <div class="liste tableaudebord"><a href="index.php?page=admin&menu=tableaudebord">Tableau de Bord <img src="Images\Icônes\ic-liste.png"/></a></div> 
                             </div>
                         </div>
                         <div class="affichage" id="affichage">   
@@ -46,6 +47,9 @@
 
                                 }elseif($_GET['menu']=='creerquestion'){
                                     require_once('traitement/creer_question.php');
+
+                                }elseif($_GET['menu']=='tableaudebord'){
+                                    require_once('traitement/tableaudebord.php');
                                 }
                             }
                             if(empty($_GET['menu'])) require_once('traitement/liste_joueur.php');

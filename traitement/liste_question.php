@@ -1,11 +1,30 @@
 <?php 
+$error = "";
+    If (isset($_POST['submit'])) {
+        If( $_POST['nb-qts'] <5) $error = "Le nombre de qustion doit être >= & 5";
+         else {
+            $data = file_get_contents('fichierJson/parametre.json');
+             $newdata= json_decode($data,true);  
+             // On ajoute le nouvel élement
+                 $newdata[0]['nb-qts']= $_POST['nb-qts'];
+                // On réencode en JSON
+                $newdata = json_encode($newdata); 
+                // // On stocke tout le JSON
+                file_put_contents('fichierJson/parametre.json', $newdata);
+                // return "Votre question  a bien été enregistrée"; 
+           }
+    }
  $data = getDatas($file = "Question");
-?>
+ $nbqts = getDatas($file = "parametre");
+?> 
     <div class="les-questions" id="les-questions">
         <div class="nb-quest"> 
-            <span class="nb-q_jeu">Nombre de question/jeu</span>
-            <input type="number" name="nb-qts">
-            <input type="submit" name="submit-nb" value="OK">
+            <form action="" method="post" id="form-nb">
+                <span class="nb-q_jeu">Nombre de question/jeu</span>
+                <input type="number" name="nb-qts" id="nb-qts" value="<?= isset($nbqts['nb-qts']),$nbqts[0]['nb-qts']?>">
+                <input type="submit" name="submit" value="OK">
+                <span id="errore" style="color:red; display:block; margin-top:5px"><?= !empty($error)? $error:"";?></span>
+            </form>
         </div> 
 
         <div class="affichage-qt" id="affichage-qt">
@@ -60,14 +79,9 @@
                                     echo "<div><textarea disabled>".$data[$j]['reponse'][0]."</textarea><br></div>";
                             }
                          }
-                       //  if(0===intval("-")) echo "exacte";
-                    
-                   }
-                   
-                  
+                   }          
         ?>
         </div>
-
         <?php
 //pagination
       echo "<div class=\"btn-suiv-prec-q\">";
@@ -86,5 +100,34 @@
     ?>  
  
     </div>
-   
+    
+<script>
+    document.getElementById('form-nb').addEventListener('submit',function(e){
+        const nbqts= document.getElementById('nb-qts')
+        const errore= document.getElementById('errore')
+        var err = false
+       if(nbqts.value < 5){
+           nbqts.style.border= "1px solid red"
+           nbqts.style.outline= "none"
+           err = true
+       }
+       if(nbqts.value < 5){
+          errore.innerHTML= "Le nombre de qustion doit être >= & 5"
+          err = true
+       }
+       if(nbqts.value ==''){
+          errore.innerHTML= "Saisir le nbre question et valider"
+          err = true
+       }
+       nbqts.addEventListener('focus',function(e){
+        errore.innerText = ""
+       nbqts.innerText = ""
+       nbqts.style.border= "1px solid black"
+       })
+       if(err)
+       e.preventDefault();
+       return 0
+    })
+</script>
+
 

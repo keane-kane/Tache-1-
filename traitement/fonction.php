@@ -1,8 +1,5 @@
 <?php 
-//triage des scores
-    $data = getDatas($file = "liste_jscore");
-    $columns = array_column($data, 'score');
-    array_multisort($columns, SORT_DESC, $data);
+
 
 function connexion($login , $pwd){
     $users= getDatas();
@@ -52,13 +49,15 @@ function Inscrire($nom, $prenom, $login, $mdp,$mdp_confirm,$file,$role,$file_jso
    }
 
    function ajouQuest($question, $nbPoint, array $reponses,$choix,array $correcte,$file_json='fichierJson/Question.json'){
+    $n =0;
     $data = file_get_contents($file_json);
     if(!$data or empty($data)){
-        $new_users = [];
+        $new_users =[];
     }else
-        $new_users= json_decode($data);    
+        $new_users[]= json_decode($data); 
      // On ajoute le nouvel élement
-     array_push( $new_users, [
+        $n =count($new_users);
+     array_push( $new_users,[
          'question'  =>$question ,
          'nbPoint'   => $nbPoint,
          'choix'     => $choix,
@@ -71,6 +70,8 @@ function Inscrire($nom, $prenom, $login, $mdp,$mdp_confirm,$file,$role,$file_jso
         file_put_contents($file_json, $new_users);
         return "Votre question  a bien été enregistrée";
    }
+ 
+   
  function is_connect(){
     if(!isset($_SESSION['status'])){
          header('location: index.php');

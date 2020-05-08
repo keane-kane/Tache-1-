@@ -1,5 +1,19 @@
-[{"question":"hhhhikh","nbPoint":"55","choix":"choix_multis","reponse":["con","concon","3cons"],
-    "correcte":[0,"on_1",null]},{"question":"c'est quoi la follie","nbPoint":"15","choix":"choix_multis",
-        "reponse":["con","fou","dingue"],"correcte":[0,"on_1","on_2"]},
-        {"question":"c'est quoi la follie2","nbPoint":"89","choix":"choix_simple",
-            "reponse":["gtt","nul","on est","dingg"],"correcte":[0,"on_1",0,0]}]
+[{"question":"blbllslrr","nbPoint":"6","choix":"choix_multis",
+    "reponse":["kkk","jjjj","ggg"],"correcte":[0,"on_1","on_2"]},
+
+    {"question":"je suis occupefffr","nbPoint":"54","choix":"choix_multis",
+        "reponse":["ok","non","0"],"correcte":["on_0","on_1",0]}
+    ,{"question":"vais y","nbPoint":"54","choix":"choix_multis",
+        "reponse":["ok","non","con"],"correcte":["on_0","on_1",0]}
+   , {"question":"je viens ","nbPoint":"25","choix":"choix_multis",
+    "reponse":["vasir","non","oiu"],"correcte":["on_0","on_1",0]}
+   , {"question":"je suis laid","nbPoint":"56","choix":"choix_multis",
+    "reponse":["hum","non","oiu"],"correcte":["on_0","on_1",0]}
+    ,{"question":"je suis con con","nbPoint":"06","choix":"choix_multis",
+        "reponse":["ok","noen","oiu"],"correcte":["on_0","on_1",0]}
+    ,{"question":"j sais plus","nbPoint":"7","choix":"choix_multis",
+        "reponse":["ok","yes","oiu"],"correcte":["on_0","on_1",0]}
+    ]
+
+
+

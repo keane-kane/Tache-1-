@@ -1,6 +1,6 @@
 <?php 
-  // is_connect();
-//var_dump($erreur);
+ 
+//var_dump($_COOKIE['nb-qts']);
 $nom ="";
 $prenom="";
 $login="";
