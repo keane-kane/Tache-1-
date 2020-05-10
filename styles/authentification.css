@@ -2,8 +2,6 @@
 @import "interfaceAdmin.css";
 @import "interfaceJoueur.css";
 
-
-
 body{
     margin:0;
     position: relative;
@@ -49,7 +47,7 @@ body{
 .position{
     position: relative;
     margin:auto;
-   width: 35%;
+   width:25em;
    top:2em;
    
 }
@@ -80,17 +78,17 @@ form{
    
 }
 .div2{
-    margin: 1.5em 2em 0px 1em;
+    margin: 1.3em 2em 0px 1em;
     background-color: #ccc;
 }
 .div3{
-    margin: 1.5em 0px 0px 1em;
+    margin: 1.3em 0px 0px 1em;
     
 }
 .inputF{
     border:none;
-    height: 50px;
-    width:25em;
+    height: 40px;
+    width:23em;
     margin-left: 0px;
     text-indent: 25px;
     background-color: #ccc;

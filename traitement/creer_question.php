@@ -72,7 +72,7 @@ $tes_on=0;
             <span class="erreurq" id="errort"></span>
             <form  id="quest-form" action="" method="post">
                 <span>Questions <i style="color: red">*</i></span>
-                <textarea  name="question" id="question" cols="40" rows="3"><?= !empty($_POST["question"]) ? $_POST["question"]:""?></textarea>
+                <textarea  name="question" id="question" cols="36" rows="3"><?= !empty($_POST["question"]) ? $_POST["question"]:""?></textarea>
                 <span class="q_error"><?= !empty($erreurs["question"]) ? $erreurs["question"]:""?></span>
 
                 <div class="nb_point">
@@ -105,7 +105,7 @@ $tes_on=0;
           function ajout(choix,i){
               if(choix == "choix_text"){
                 return  "<div><span class=span1 >Réponse <i style=color:red>*</i>"+
-                        "<textarea name=\"reponse\" id=\"reponse\" cols=\"35\" rows=\"2\"></textarea>"+
+                        "<textarea name=\"reponse\" id=\"reponse\" cols=\"32\" rows=\"2\"></textarea>"+
                         "<button type =button onclick=Reset(this)>"+
                         "<img src=\"Images/Icônes/ic-supprimer.png\"></button</div>"
               

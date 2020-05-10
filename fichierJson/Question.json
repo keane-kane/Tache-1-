@@ -1,19 +1,46 @@
-[{"question":"blbllslrr","nbPoint":"6","choix":"choix_multis",
-    "reponse":["kkk","jjjj","ggg"],"correcte":[0,"on_1","on_2"]},
+[{
+"question":"blbllslrr",
+"nbPoint":"6",
+"choix":"choix_multis",
+"reponse":["kkk","jjjj","ggg"],
+"correcte":[0,"on_1","on_2"]},
 
-    {"question":"je suis occupefffr","nbPoint":"54","choix":"choix_multis",
-        "reponse":["ok","non","0"],"correcte":["on_0","on_1",0]}
-    ,{"question":"vais y","nbPoint":"54","choix":"choix_multis",
-        "reponse":["ok","non","con"],"correcte":["on_0","on_1",0]}
-   , {"question":"je viens ","nbPoint":"25","choix":"choix_multis",
-    "reponse":["vasir","non","oiu"],"correcte":["on_0","on_1",0]}
-   , {"question":"je suis laid","nbPoint":"56","choix":"choix_multis",
-    "reponse":["hum","non","oiu"],"correcte":["on_0","on_1",0]}
-    ,{"question":"je suis con con","nbPoint":"06","choix":"choix_multis",
-        "reponse":["ok","noen","oiu"],"correcte":["on_0","on_1",0]}
-    ,{"question":"j sais plus","nbPoint":"7","choix":"choix_multis",
-        "reponse":["ok","yes","oiu"],"correcte":["on_0","on_1",0]}
-    ]
+{
+"question":"Les langages web ?",
+"nbPoint":"5",
+"choix":"choix_multis",
+"reponse":["HTML","R","JAVA"],
+"correcte":["on_0",0,"on_2"]
+},
+{
+"question":"D ou vient le corona",
+"nbPoint":"5",
+"choix":"choix_simple",
+"reponse":["Italie","Chine"],
+"correcte":[0,"on_1"]
+},
+{
+"question":"Quel terme definit le langage qui s adapte sur android et sur IOS",
+"nbPoint":"5",
+"choix":"choix_text",
+"reponse":["JAVA"],
+"correcte":["JAVA"]
+},
+{
+"question":"Quelle est la premiere de codage au senegal?",
+"nbPoint":"5",
+"choix":"choix_simple",
+"reponse":["Simplon","Orange digital center"],
+"correcte":[0,"on_1"]
+},
+
+{
+"question":"Les precurseurs de la revolution digital",
+"nbPoint":"5",
+"choix":"choix_simple",
+"reponse":["GAFAM","CIA-FBI"],
+"correcte":["on_0",0]}
+]
 
 
 
