@@ -35,7 +35,7 @@
     left: 1em;
 }
 .nom-user{
-    left: 4.5em;
+    left: 4em;
 }
 .wellcome-user{   
     color: #fff;
@@ -79,7 +79,7 @@
     border: 1px solid #3addd6;
     background-color:#fff;
     border-radius: 10px;
-    margin: -3em 0 0em 0px;
+    margin: -3em 0em 0em 0px;
     padding-bottom: 5px;
     float: left;
 }
@@ -120,18 +120,19 @@
     line-height: 20px;
     border-bottom: 1px solid #3addd6;
 }
-.div_aff, .div_correct{
+.div_aff,.div_correct{
     clear: both;
     margin-top:.1em;
-    left : 3em;
+    left : 5em;
 }
+
 .div_aff input{
     background-color: rgb(228, 228, 228);
     height: 1.3em;
     width: 1.5em;
 }
 .div_aff span, .div_correct span{
-    top: -4px;
+    top: -3px;
 }
 #btn-quitter{
     text-decoration: none;
@@ -140,7 +141,7 @@
     margin: 1px 5px  6px 10px;
     text-align:center ;
     color: #fff;
-    font-size: 15px;
+    font-size: 20px;
     font-family: "Open Sans";
     font-weight: bold;
 }
@@ -164,12 +165,12 @@
     display: flex;
     margin-right: 23px;
 }
+
 .lq_correct{
     position: relative;
-    display: inline;
    left:15px;
-   border: none;
-   resize: none;  
+   margin : 0px  5px 0px 0;  
+   padding-right: 10px;
    font-family: "Open Sans";
    font-weight: bold; 
 }

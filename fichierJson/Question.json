@@ -1,9 +1,9 @@
 [{
-"question":"blbllslrr",
+"question":"C'est quoi le COVID-19",
 "nbPoint":"6",
 "choix":"choix_multis",
-"reponse":["kkk","jjjj","ggg"],
-"correcte":[0,"on_1","on_2"]},
+"reponse":["Une maladie","Du bluffe","Un vuris respiratoire"],
+"correcte":["on_0",0,"on_2"]},
 
 {
 "question":"Les langages web ?",
@@ -41,6 +41,3 @@
 "reponse":["GAFAM","CIA-FBI"],
 "correcte":["on_0",0]}
 ]
-
-
-

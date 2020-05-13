@@ -88,7 +88,6 @@ function Inscrire($nom, $prenom, $login, $mdp,$mdp_confirm,$file,$role,$file_jso
         return $data;
  }
  function test_input($data) {
-    $data = addslashes(htmlentities($data));
     $data = trim($data);
     $data = stripslashes($data);
     $data = htmlspecialchars($data);

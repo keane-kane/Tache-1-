@@ -29,12 +29,13 @@
                      <div class="content-quest">
                        <?php
                          if(isset($_GET['page']) && ($_GET['page']) =="joueur" && !isset($_GET['game']))
-                             echo '<a class=" btn-dabut" href="?page=joueur&game=debut" >Demarer </a>';
+                             echo '<a class=" btn-dabut" href="?page=joueur&game=debut" >Demarrer </a>';
 
                         if(isset($_GET['game']) && ($_GET['game']) =="debut")
                               require_once("traitement/afficher.php"); 
                          if(isset($_GET['game']) && ($_GET['game']) =="fin")
-                              require_once("traitement/correction.php");   
+                              require_once("traitement/correction.php"); 
+
                         ?>
                      </div>
                     <div class="top-score">
@@ -43,12 +44,12 @@
                                <div class="meilleur_5">
                                    <table class="liste-joueur">
                                       <?php 
-                                         $i = 1;
-                                         while($i<= 5){
-                                             if(isset($data[$i])){
-                                            echo   "<tr><td>".$data[$i]['nom'] ,"  ",$data[$i]['prenom'].
-                                                   "</td><td class=color".$i.">".$data[$i]['score']."</td></tr>";
-                                             }echo "<p>pas de joueur dispo</p>";
+                                         $i = 0;
+                                         while($i<5){
+                                             if(isset($data[$i]['nom']) && isset($data[$i]['prenom'])){
+                                                  echo   "<tr><td>".$data[$i]['nom'] ,"  ",$data[$i]['prenom'].
+                                                         "</td><td class=color".($i+1).">".$data[$i]['score']."</td></tr>";
+                                             }else echo "<p>pas de joueur dispo</p>";
                                              $i++;
                                          }
                                       ?>
@@ -58,11 +59,12 @@
                             <li><a href=""> Mon meilleur score</a>
                                 <div class="meilleur_1">     
                                     <table class="liste-joueur">
-                                     <?php $i = 1; while($i<= 5){
-                                         if(isset($data[$i]) && ($data[$i]['login'] == $login)){
+                                     <?php $i = 0; while($i<5){
+                                         if(isset($data[$i]['nom']) && isset($data[$i]['prenom']) && ($data[$i]['login'] == $login)){
                                            echo "<tr><td>".$data[$i]['nom']." ".$data[$i]['prenom'].
-                                                  "</td><td class=color".$i.">".$data[$i]['score']."</td></tr>";
-                                          } $i++; if($i>5) echo "<p>pas de joueur dispo</p>";} ?>
+                                                  "</td><td style =\"background:yellow;\" >".$data[$i]['score']."</td></tr>";
+                                          } $i++;
+                                          if($i>5) echo "<p>pas de joueur dispo</p>";  } ?>
                                     </table>
                                 </div>
                             </li>

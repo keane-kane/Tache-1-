@@ -90,7 +90,7 @@ $tes_on=0;
                         <option value="choix_simple" id="">Réponse de type radio</option>
                         <option value="choix_multis" id="">Réponse de type checkbox</option>
                     </select>
-                    <button type="button" id="btn-ajout" name="ajout" title="ajouter un element"><img src="Images/Icônes/ic-ajout-réponse.png" alt=""></button>
+                    <button type="button" id="btn-ajout" name="ajout" title="ajouter un element"><img src="Images/ic-ajout.png" alt=""></button>
                 </div>
 
                 <div id="resp_input">
@@ -103,25 +103,26 @@ $tes_on=0;
 
         <script>
           function ajout(choix,i){
+            
               if(choix == "choix_text"){
                 return  "<div><span class=span1 >Réponse <i style=color:red>*</i>"+
                         "<textarea name=\"reponse\" id=\"reponse\" cols=\"32\" rows=\"2\"></textarea>"+
-                        "<button type =button onclick=Reset(this)>"+
-                        "<img src=\"Images/Icônes/ic-supprimer.png\"></button</div>"
+                        "<button type =button onclick=Reset(this,i)>"+
+                        "<img src=\"Images/ic-supprimer.png\"></button</div>"
               
               }else if(choix == "choix_simple"){
                 return "<div><span>Réponse " +(i+1)+"<i style=color:red>*</i>"+
                        "<input type =text name=reponse_"+(i)+" error=reponse-"+(i)+">"+
                        "<input type =radio name=on_0 value=on_"+(i)+">"+
-                       "<button type =button onclick=Reset(this)>"+
-                       "<img src=\"Images/Icônes/ic-supprimer.png\"></button></div>";
+                       "<button type =button onclick=Reset(this,i)>"+
+                       "<img src=\"Images/ic-supprimer.png\"></button></div>";
              
               }else if(choix == "choix_multis"){
                 return  "<div><span>Réponse " +(i+1)+"<i style=color:red>*</i>"+
-                        "<input type =text name=reponse_"+(i)+" error=reponse_"+(i+1)+" >"+
+                        "<input type =text name=reponse_"+(i)+"error=reponse_"+(i+1)+" >"+
                         "<input type=checkbox name=on_"+(i)+" value=on_"+(i)+">"+
-                        "<button type =button onclick=Reset(this)>"+
-                        "<img src=\"Images/Icônes/ic-supprimer.png\"></button></div";
+                        "<button type =button onclick=Reset(this,i)>"+
+                        "<img src=\"Images/ic-supprimer.png\"></button></div";
             }
           }
           function danger(t){
@@ -144,10 +145,11 @@ $tes_on=0;
                 elt.style.border='none'
               }
           }  
-          function Reset(lui){
+          function Reset(lui ,i){
               var div =lui.parentNode
                 div.parentNode.removeChild(div);
-                
+                if(i>1 &&  (i /(i-1))>1)
+                alert(i);
           }
            //declaration du variable i comme global pour les
            //choix de type checkbox

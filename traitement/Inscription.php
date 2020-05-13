@@ -8,7 +8,7 @@ $role ="";
 $mdp="";
 $mdp_confirm="";
 $file="";
-$erreur="";
+$erreur=[];
 $stock_img = "Images/";
 $charger = 1;
 $erreurs ="";
@@ -25,7 +25,7 @@ $patern_mail= " /^.+@.+\.[a-zA-Z]{2,}$/ ";
         $login=$_POST['login'];
         $mdp=$_POST['password'];
         $mdp_confirm=$_POST['pwd_confirm'];
-        $erreur ="";
+        $erreur =[];
         //teste et validite de la saisie
          if(!preg_match($pattern_nom_prenom, test_input($nom))&& isset($nom)){
              $erreur['nom']= "le nom est incorrect";
@@ -49,15 +49,15 @@ $patern_mail= " /^.+@.+\.[a-zA-Z]{2,}$/ ";
            if(isset($_FILES['imgAvatar']) && empty($_FILES['imgAvatar']['error'])){
                
                $target_file = basename($_FILES['imgAvatar']['name']);
-               echo $target_file;
+              // echo $target_file;
                $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-               echo $imageFileType;
+               //echo $imageFileType;
                //si fichier n'est pas une image
                $check = @getimagesize($_FILES["imgAvatar"]["tmp_name"]);
                //la taille de l'image
                $taille = filesize($_FILES["imgAvatar"]["tmp_name"]);
-               echo $taille;
-                   if($taille > 100000){
+                 //echo $taille;
+                   if($taille > 6000000){
                        $erreurs= "le fichier est trop lourd";
                        $charger = 0;
                    }elseif(!empty($imageFileType) && $imageFileType != "jpg" && $imageFileType != "png"){
@@ -71,11 +71,11 @@ $patern_mail= " /^.+@.+\.[a-zA-Z]{2,}$/ ";
                        $erreurs= "le fichier doit etre une image";
                        $charger =0;
                    }
-                   echo  $charger;
-                   echo $erreurs;
-                   var_dump($erreur);
+                //    echo  $charger;
+                //    echo $erreurs;
+                //    var_dump($erreur);
                if($charger == 1 && empty($erreurs) && empty($erreur)){ 
-                   echo  $charger;
+                   //echo  $charger;
                     //teste si un admin ou joueur
                     
                     if(strpos($_SERVER['QUERY_STRING'], "admin") !== false){
@@ -97,7 +97,7 @@ $patern_mail= " /^.+@.+\.[a-zA-Z]{2,}$/ ";
                         }     
                     }else $erreurs= "Erreur de telechargement";
                 }
-            }
+            }else $erreurs= "Televerser une image";
         }
  
  //  var_dump($users= getDatas());
@@ -139,6 +139,7 @@ $patern_mail= " /^.+@.+\.[a-zA-Z]{2,}$/ ";
                 <input type="file" name="imgAvatar" id="imgAvatar"  >
                 <span class="err-span2-f"><?= !empty($erreurs) ? $erreurs: "" ?></span>
                 <input class="input7" type="submit" name="inscrire" value="Créer compte">
+                <!-- <input class="input8" type="submit" name="inscrire" value="login"> -->
             </form>
         </div>
         <div class="imageavatar">
